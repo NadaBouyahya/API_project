@@ -1,6 +1,30 @@
-var movieBanner = document.getElementById('movieBanner')
-var Title =document.getElementById ('movieTitle')
-var text = document.getElementById('myMovie')
+//XMLHttpRequest
+const request = new XMLHttpRequest();
+request.open("GET", "https://ghibliapi.herokuapp.com/films");
+request.send();
+request.onload = ()=> {
+    if(request.status === 200) {
+        console.log(JSON.parse(request.response))
+    }
+    else{console.log(`error ${request.status}`)}
+    // console.log(request);
+}
+
+// fetch api
+
+fetch('https://ghibliapi.herokuapp.com/films')
+ .then (response => {
+     return response.json();
+ }).then(json=> {
+    //  console.log(json);
+ })
+
+
+
+
+// var movieBanner = document.getElementById('movieBanner')
+// var Title =document.getElementById ('movieTitle')
+// var text = document.getElementById('myMovie')
 
 // async function GetData(){
 //     const response = await fetch("https://ghibliapi.herokuapp.com/films")
@@ -11,11 +35,11 @@ var text = document.getElementById('myMovie')
 // }
 // GetData();
  
-fetch("https://ghibliapi.herokuapp.com/films").then(
-    response => {return response.json();} 
-    //function(response){return response.json();}
-).then(data => {
-    // console.log(data);
-    text.innerHTML = "the movie " + (data[20]["title"])+" is about " + (data[20]["description"])+" and directed by " + (data[20]["director"]);
+// fetch("https://ghibliapi.herokuapp.com/films").then(
+//     response => {return response.json();} 
+//     //function(response){return response.json();}
+// ).then(data => {
+//     console.log(data);
+    // text.innerHTML = "the movie " + (data[20]["title"])+" is about " + (data[20]["description"])+" and directed by " + (data[20]["director"]);
 
-})
+// })
