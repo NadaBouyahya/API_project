@@ -1,45 +1,42 @@
-//XMLHttpRequest
-const request = new XMLHttpRequest();
-request.open("GET", "https://ghibliapi.herokuapp.com/films");
-request.send();
-request.onload = ()=> {
-    if(request.status === 200) {
-        console.log(JSON.parse(request.response))
+var content = document.getElementById('content')
+async function GetData(){
+    const response = await fetch("https://ghibliapi.herokuapp.com/films")
+    const data = await response.json()
+    
+for(var i = 0; i<21;i++){
+           content.innerHTML+= `<div class='col-4 container-fluid'> 
+                        <h4> ${data[i]["title"]}</h4> 
+                        <img class='img-thumbnail' src=${data[i]["image"]}>
+                        <p> ${data[i]["description"]}</p> 
+                        </div>`;
+
     }
-    else{console.log(`error ${request.status}`)}
-    // console.log(request);
-}
+ }
+GetData();
 
-// fetch api
+// for(j=random ; j<random + 8 ; j++){
+//     var obj = lst[j].currencies;
 
-fetch('https://ghibliapi.herokuapp.com/films')
- .then (response => {
-     return response.json();
- }).then(json=> {
-    //  console.log(json);
- })
+//     c.innerHTML += 
+//     <div class="" >
+//         <div class="col-4">
+//             <a href="#"> <img src ="${lst[j].flags.png}" alt="country" width="200px" height="100px"></a>
+//         </div>
+//         <div >
+//             <h4>${lst[j].name.common} </h4>
+//             <p>${lst[j].capital} - ${lst[j].region}</p>
+//             <p>${obj[Object.keys(obj)[0]].name}(${obj[Object.keys(obj)[0]].symbol}) </p>
+//         </div>
+//     </div>
+  
+
+// cut the title :
+// var movieTitle = data[i]["title"];
+    // if (movieTitle.length >10){
+    //     movieTitle = movieTitle.substring(0,10);
+    //  
+    
 
 
 
 
-// var movieBanner = document.getElementById('movieBanner')
-// var Title =document.getElementById ('movieTitle')
-// var text = document.getElementById('myMovie')
-
-// async function GetData(){
-//     const response = await fetch("https://ghibliapi.herokuapp.com/films")
-//     const data = await response.json()
-//     console.log(data);
-//     movieBanner.src = data[0]["image"];
-//     Title.innerHTML = data[0]["title"];
-// }
-// GetData();
- 
-// fetch("https://ghibliapi.herokuapp.com/films").then(
-//     response => {return response.json();} 
-//     //function(response){return response.json();}
-// ).then(data => {
-//     console.log(data);
-    // text.innerHTML = "the movie " + (data[20]["title"])+" is about " + (data[20]["description"])+" and directed by " + (data[20]["director"]);
-
-// })
