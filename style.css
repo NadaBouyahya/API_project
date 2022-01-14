@@ -9,7 +9,12 @@ body {
 img {
     width: 200px;
 }
-
+#allMovies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 p{
     font-size: 15px;
 }
