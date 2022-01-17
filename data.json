@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "libelle": "pro1",
+        "prix" : 200,
+        "catégorie": "catg1",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    },
+    {
+        "id": 2,
+        "libelle": "pro2",
+        "prix" : 200,
+        "catégorie": "catg1",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    },
+    {
+        "id": 3,
+        "libelle": "pro3",
+        "prix" : 200,
+        "catégorie": "catg1",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    },
+    {
+        "id": 4,
+        "libelle": "pro4",
+        "prix" : 200,
+        "catégorie": "catg2",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    },
+    {
+        "id": 5,
+        "libelle": "pro5",
+        "prix" : 200,
+        "catégorie": "catg2",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    },
+    {
+        "id": 6,
+        "libelle": "pro6",
+        "prix" : 200,
+        "catégorie": "catg3",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    },
+    {
+        "id": 7,
+        "libelle": "pro7",
+        "prix" : 200,
+        "catégorie": "catg3",
+        "disponibilité":["tanger","tetouan","fes hakma l3alam"],
+        "fournisseur":{
+            "Raison Sociale":"my company",
+            "Adresse": "paris-rue sadam"
+        }
+    }
+]
